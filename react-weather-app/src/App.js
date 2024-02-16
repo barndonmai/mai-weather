@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+// document.body.addEventListener('touchmove', function (e) { e.preventDefault(); });
 
 function App() {
   const [data, setData] = useState({})

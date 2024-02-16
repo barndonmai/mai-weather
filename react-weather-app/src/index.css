@@ -4,14 +4,16 @@
   box-sizing:border-box;
   margin:0;
   padding:0;
-  
+  position: relative;
+  overflow-x: hidden;
+  overflow-y:hidden;
 }
 iframe
 {
     display: none;
 }
 body {
-  overflow-y:hidden;
+
   font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
