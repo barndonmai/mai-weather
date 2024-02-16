@@ -5,7 +5,7 @@ function App() {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
   const [movedToTop, setMovedToTop] = useState(false); // New state to track whether search has moved to top
-  const [key, setKey] = useState(process.env.REACT_APP_API_KEY)
+  const key = process.env.REACT_APP_API_KEY
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${key}`;
 
@@ -19,7 +19,6 @@ function App() {
       })
 
       setLocation('');
-      setKey(process.env.REACT_APP_API_KEY);
       setMovedToTop(true); // Set movedToTop to true when Enter key is pressed
 
     }
@@ -62,18 +61,18 @@ function App() {
           <div className="bottom">
             <div className="feels">
               {data.main ? <p className="bold">{data.main.feels_like.toFixed()}°C</p> : null}
-              <p>Feels Like</p>
+              <p1>Feels Like</p1>
 
             </div>
             <div className="humidity">
               {data.main ? <p className="bold">{data.main.humidity.toFixed()}%</p> : null}
-              <p>Humidity</p>
+              <p1>Humidity</p1>
 
             </div>
 
             <div className="wind">
               {data.main ? <p className="bold">{data.wind.speed.toFixed()} m/s</p> : null}
-              <p>Wind Speed</p>
+              <p1>Wind Speed</p1>
 
 
             </div>
@@ -81,7 +80,7 @@ function App() {
 
           </div>
         }
-        {data.name != undefined &&
+        {/* {data.name != undefined &&
           <div className="bottom">
 
             <div className="humidity">
@@ -119,7 +118,7 @@ function App() {
 
 
           </div>
-        }
+        } */}
       </div>
     </div>
   );
